@@ -2,21 +2,25 @@ using ResourseSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 namespace ResourseSystemView
 {
-
     public class ResourseButton : MonoBehaviour
     {
-        [SerializeField] private ResourseType resourseType;
+        [SerializeField] private ResourseTypes resourseType;
         [SerializeField] private Image resourseIcon;
         private void Awake()
         {
-            RespurseVewSerive.Instanse.SetEnabledIcon(resourseIcon, resourseType);
-            Private void Update()
-            {
-                ProcessResourse
-            }
-
+            ResourseViewServise.Instance.SetEnabledIcon(resourseIcon, resourseType);
         }
-    }
+        private void Update()
+        {
+            ProcesResourse();
+        }
+        private void ProcesResourse()
+            {
+                //TODO process resourse with tima data
+            }
+}
 }

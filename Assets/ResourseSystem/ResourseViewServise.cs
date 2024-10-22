@@ -1,46 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 namespace ResourseSystem
 {
     public class ResourseViewServise
     {
         private static ResourseViewServise instance;
-        public static ResourseViewServise Instance;
+        public static ResourseViewServise Instance
         {
             get
             {
                 if (instance == null)
                 {
-                   
+                    instance = new ResourseViewServise();
                 }
+                return instance;
             }
 
-    }
-        private ResourseViewDataSO _viewData;
-        private ResourseViewDataSO ViewData;
+        }
+        private ResourseViewData _viewData;
+        private ResourseViewData ViewData
         {
             get
             {
                 if (_viewData == null)
-                    _viewData = Resourses.Load("ResourseViewDataSO") as ResourseViewDataSO
+                    _viewData = Resources.Load("ResourseViewDataSO") as ResourseViewData;
+                return _viewData;
             }
         }
-        private void LoadData()
+        public void SetEnabledIcon(Image resourseIcon, ResourseTypes resourseType)
         {
-            ResourseViewDataSo viewData = Resourse.Load("ResourseViewDataSO") as ResourseViewDataSO;
-        }
-        public void SetEnabledIcon(ImageConversion resourseIcon, ResourseType resourseType)
-        {
-            if (ViewData.TryGetEnabledIcon(resourseType; Outputter Sprite icon))
+            if (ViewData.TryGetEnabledIcon(resourseType, out Sprite icon))
             {
-                resourseIcon.sprite = icon
+                resourseIcon.sprite = icon;
             }
-        }        
-        public void SetDisabledIcon(ImageConversion resourseIcon, ResourseType resourseType)
+        }
+        public void SetDisabledIcon(Image resourseIcon, ResourseTypes resourseType)
         {
-            
+
         }
 
+    }
 }
 

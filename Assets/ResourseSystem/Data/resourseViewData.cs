@@ -8,42 +8,32 @@ namespace ResourseSystem
     [CreateAssetMenu(fileName = "ResourseViewData",
 
     menuName = "SO/New Resourse View Data")]
-    public class resourseViewData : ScriptableObject
+    public class ResourseViewData : ScriptableObject
     {
-        [SerializeField] public List<resourseViewData> ResourseViewData { get; private set; }
-    }
-    public enum ResourseTypes
-    { 
-        
-    }
-    public bool TryGetEnabledIcon(ResourseTypes resourseType, out Sprite icon)
-    {
-        icon = null;
-        foreach (var viewData in ResourseViewData)
+        [SerializeField] public List<ResourseNewData> ViewData { get; private set; }
+        public bool TryGetEnabledIcon(ResourseTypes resourseType, out Sprite icon)
         {
-            if (viewData.ResourseType == resourseType)
+            icon = null;
+            foreach (var viewData in ViewData)
             {
-                return true;
-            }
+                if (viewData.ResourseType == resourseType)
+                {
+                    return true;
+                }
             }
             return false;
-    }    public bool TryGetDisabledIcon(ResourseTypes resourseType, out Sprite icon)
-    {
-        icon = null;
-        foreach (var viewData in ResourseViewData)
+        }
+        public bool TryGetDisabledIcon(ResourseTypes resourseType, out Sprite icon)
         {
-            if (viewData.ResourseType == resourseType)
+            icon = null;
+            foreach (var viewData in ViewData)
             {
-                return true;
-            }
+                if (viewData.ResourseType == resourseType)
+                {
+                    return true;
+                }
             }
             return false;
-    }
-    [Serializable]
-    public class ResourseNewData
-    {
-        [field:SerializeField] public ResourseTypes ResourseType { get; private set; }
-        [field:SerializeField] public Sprite ActiveStateIcon { get; private set; }
-        [field:SerializeField] public Sprite DisabledStateIcon { get; private set; }
+        }
     }
 }
