@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Compilation;
 using UnityEngine;
+
+
 namespace ResourseSystem
 {
     [CreateAssetMenu(fileName = "ResourseViewData",
@@ -10,11 +12,12 @@ namespace ResourseSystem
     menuName = "SO/New Resourse View Data")]
     public class ResourseViewData : ScriptableObject
     {
-        [SerializeField] public List<ResourseNewData> ViewData { get; private set; }
+        
+        [field:SerializeField] public List<ResourseNewData> ResourceViewData { get; private set; }
         public bool TryGetEnabledIcon(ResourseTypes resourseType, out Sprite icon)
         {
             icon = null;
-            foreach (var viewData in ViewData)
+            foreach (var viewData in ResourceViewData)
             {
                 if (viewData.ResourseType == resourseType)
                 {
@@ -26,7 +29,7 @@ namespace ResourseSystem
         public bool TryGetDisabledIcon(ResourseTypes resourseType, out Sprite icon)
         {
             icon = null;
-            foreach (var viewData in ViewData)
+            foreach (var viewData in ResourceViewData)
             {
                 if (viewData.ResourseType == resourseType)
                 {
