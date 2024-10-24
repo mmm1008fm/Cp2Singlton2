@@ -19,13 +19,13 @@ namespace ResourseSystem
             }
 
         }
-        private ResourseViewData _viewData;
-        private ResourseViewData ViewData
+        private ResourseViewDataSO _viewData;
+        private ResourseViewDataSO ViewData
         {
             get
             {
                 if (_viewData == null)
-                    _viewData = Resources.Load("ResourseViewDataSO") as ResourseViewData;
+                    _viewData = Resources.Load("ResourseViewDataSO") as ResourseViewDataSO;
                 return _viewData;
             }
         }
