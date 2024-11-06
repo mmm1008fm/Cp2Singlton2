@@ -1,4 +1,4 @@
-using ResourseSystem;
+using ResourceSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,16 +6,16 @@ namespace ResourceSystem
 {
     public class ReadDataservice
     {
-        private static ReadDataservice insctance;
-        public static ReadDataservice instance
+        private static ReadDataservice instance;
+        public static ReadDataservice Instance
         {
             get
             {
-                if (insctance == null)
+                if (instance == null)
                 {
-                    insctance = new ReadDataservice();
+                    instance = new ReadDataservice();
                 }
-                return insctance;
+                return instance;
             }
         }
 
@@ -26,19 +26,26 @@ namespace ResourceSystem
             {
                 if (data == null)
                 {
-                    data = new Resources.Load("ResourceSO") as ResourceDataSO;
+                    data = Resources.Load("ResourceSO") as ResourseTimeDataSO;
                 }
                 return data;
             }
         }
-        public void SetEnableTime(ref float timer, ResoutceType resourcetype)
+        public void SetEnableTime(ref float timer, ResourceTypes resourcetype)
         {
             Debug.Log(Data);
-            if (Data.EnableTime())
+            if (Data.TryGetEnabledIcon(resourcetype, out float value))
             {
-
+                timer = value;
             }
         }
     }
 }
+/*public void SetDisabledIcon(Image resourseIcon, ResourceTypes resourseType)
+{
+    if (ViewData.TryGetDisabledIcon(resourseType, out Sprite icon))
+    {
+        resourseIcon.sprite = icon;
+    }
+}*/
 

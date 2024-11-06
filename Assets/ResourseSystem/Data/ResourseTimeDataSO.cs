@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace ResourseSystem
+namespace ResourceSystem
 {
     [CreateAssetMenu(fileName = "ResourseTimeData",
 
@@ -11,7 +11,7 @@ namespace ResourseSystem
     {
 
         [field: SerializeField] public List<ResourseTimeData> ResourceTimeData { get; private set; }
-        public bool TryGetEnabledIcon(ResourseTypes resourseType, out float value)
+        public bool TryGetEnabledIcon(ResourceTypes resourseType, out float value)
         {
             value = 0;
             foreach (var viewData in ResourceTimeData)
@@ -24,7 +24,7 @@ namespace ResourseSystem
             }
             return false;
         }
-        public bool TryGetDisabledIcon(ResourseTypes resourseType, out float value)
+        public bool TryGetDisabledIcon(ResourceTypes resourseType, out float value)
         {
             value = 0;
             foreach (var viewData in ResourceTimeData)

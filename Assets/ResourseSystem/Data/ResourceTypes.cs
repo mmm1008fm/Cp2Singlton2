@@ -1,6 +1,6 @@
-﻿namespace ResourseSystem
+﻿namespace ResourceSystem
 {
-    public enum ResourseTypes
+    public enum ResourceTypes
     { 
         Uranium = 0,
         Plutonium = 1,

@@ -5,7 +5,7 @@ using UnityEditor.Compilation;
 using UnityEngine;
 
 
-namespace ResourseSystem
+namespace ResourceSystem
 {
     [CreateAssetMenu(fileName = "ResourseViewData",
 
@@ -14,7 +14,7 @@ namespace ResourseSystem
     {
         
         [field:SerializeField] public List<ResourseViewData> ResourceViewData { get; private set; }
-        public bool TryGetEnabledIcon(ResourseTypes resourseType, out Sprite icon)
+        public bool TryGetEnabledIcon(ResourceTypes resourseType, out Sprite icon)
         {
             icon = null;
             foreach (var viewData in ResourceViewData)
@@ -27,7 +27,7 @@ namespace ResourseSystem
             }
             return false;
         }
-        public bool TryGetDisabledIcon(ResourseTypes resourseType, out Sprite icon)
+        public bool TryGetDisabledIcon(ResourceTypes resourseType, out Sprite icon)
         {
             icon = null;
             foreach (var viewData in ResourceViewData)

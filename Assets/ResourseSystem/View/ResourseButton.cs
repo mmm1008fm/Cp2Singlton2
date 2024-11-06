@@ -1,6 +1,8 @@
-using ResourseSystem;
+using Core;
+using ResourceSystem;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +10,7 @@ namespace ResourseSystemView
 {
     public class ResourseButton : MonoBehaviour
     {
-        [SerializeField] private ResourseTypes resourseType;
+        [SerializeField] private ResourceTypes resourseType;
         [SerializeField] private Image resourseIcon;
         private void Awake()
         {
@@ -16,11 +18,16 @@ namespace ResourseSystemView
         }
         private void Update()
         {
-            ProcesResourse();
+            ProcesResource();
         }
-        private void ProcesResourse()
-            {
-                //TODO process resourse with tima data
-            }
+        private void ProcesResource()
+        {
+/*          if (Decay time == 0) 
+        {
+                Game.FinishGame()
+        }*/
+        }
+
+
 }
 }

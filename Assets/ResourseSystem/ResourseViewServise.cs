@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-namespace ResourseSystem
+namespace ResourceSystem
 {
     public class ResourseViewServise
     {
@@ -29,16 +29,19 @@ namespace ResourseSystem
                 return _viewData;
             }
         }
-        public void SetEnabledIcon(Image resourseIcon, ResourseTypes resourseType)
+        public void SetEnabledIcon(Image resourseIcon, ResourceTypes resourseType)
         {
             if (ViewData.TryGetEnabledIcon(resourseType, out Sprite icon))
             {
                 resourseIcon.sprite = icon;
             }
         }
-        public void SetDisabledIcon(Image resourseIcon, ResourseTypes resourseType)
+        public void SetDisabledIcon(Image resourseIcon, ResourceTypes resourseType)
         {
-
+            if (ViewData.TryGetDisabledIcon(resourseType, out Sprite icon))
+            {
+                resourseIcon.sprite = icon;
+            }
         }
 
     }

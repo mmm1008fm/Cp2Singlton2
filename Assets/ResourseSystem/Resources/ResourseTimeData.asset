@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac93b31d7db38d4d95e1c6d40a5db1d, type: 3}
   m_Name: ResourseTimeData
   m_EditorClassIdentifier: 
-  <ResourceTimeData>k__BackingField: []
+  <ResourceTimeData>k__BackingField:
+  - <ResourseType>k__BackingField: 0
+    <EnrichmentTime>k__BackingField: 2
+    <DecayTime>k__BackingField: 3
+  - <ResourseType>k__BackingField: 1
+    <EnrichmentTime>k__BackingField: 4
+    <DecayTime>k__BackingField: 5

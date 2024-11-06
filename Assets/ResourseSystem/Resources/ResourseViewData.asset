@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf21a210a5b2d64bbf6cb039c0425b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 418f12bcec8ef7c4f80c70973dcd1bff, type: 3}
   m_Name: ResourseViewData
   m_EditorClassIdentifier: 
   <ResourceViewData>k__BackingField:
-  - <ResourseType>k__BackingField: 1
-    <ActiveStateIcon>k__BackingField: {fileID: 0}
-    <DisabledStateIcon>k__BackingField: {fileID: 0}
   - <ResourseType>k__BackingField: 0
-    <ActiveStateIcon>k__BackingField: {fileID: 0}
-    <DisabledStateIcon>k__BackingField: {fileID: 0}
+    <ActiveStateIcon>k__BackingField: {fileID: 21300000, guid: cd6a0803385a4f843a4cf8d13b434566, type: 3}
+    <DisabledStateIcon>k__BackingField: {fileID: 21300000, guid: bb51591686d0e4849a9d6e6addacc033, type: 3}
+  - <ResourseType>k__BackingField: 0
+    <ActiveStateIcon>k__BackingField: {fileID: 21300000, guid: 619489c2a2e65bb488f0ac6cc27767fb, type: 3}
+    <DisabledStateIcon>k__BackingField: {fileID: 21300000, guid: bfef6e47614712e42a7e790595c60dc0, type: 3}

@@ -6,7 +6,14 @@ namespace Core
 {
     public class Game
     {
+        public void StartGame()
+        {
 
-    }
+        }
+        public void FinishGame()
+        {
+
+        }
+}
 }
 
