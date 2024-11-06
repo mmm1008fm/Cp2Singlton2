@@ -16,6 +16,6 @@ MonoBehaviour:
   - <ResourseType>k__BackingField: 0
     <ActiveStateIcon>k__BackingField: {fileID: 21300000, guid: cd6a0803385a4f843a4cf8d13b434566, type: 3}
     <DisabledStateIcon>k__BackingField: {fileID: 21300000, guid: bb51591686d0e4849a9d6e6addacc033, type: 3}
-  - <ResourseType>k__BackingField: 0
+  - <ResourseType>k__BackingField: 1
     <ActiveStateIcon>k__BackingField: {fileID: 21300000, guid: 619489c2a2e65bb488f0ac6cc27767fb, type: 3}
     <DisabledStateIcon>k__BackingField: {fileID: 21300000, guid: bfef6e47614712e42a7e790595c60dc0, type: 3}

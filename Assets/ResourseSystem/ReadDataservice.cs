@@ -26,7 +26,7 @@ namespace ResourceSystem
             {
                 if (data == null)
                 {
-                    data = Resources.Load("ResourceSO") as ResourseTimeDataSO;
+                    data = Resources.Load("ResourseTimeData") as ResourseTimeDataSO;
                 }
                 return data;
             }
@@ -38,14 +38,15 @@ namespace ResourceSystem
             {
                 timer = value;
             }
+        }        
+        public void SetDisableTime(ref float timer, ResourceTypes resourcetype)
+        {
+            Debug.Log(Data);
+            if (Data.TryGetDisabledIcon(resourcetype, out float value))
+            {
+                timer = value;
+            }
         }
     }
 }
-/*public void SetDisabledIcon(Image resourseIcon, ResourceTypes resourseType)
-{
-    if (ViewData.TryGetDisabledIcon(resourseType, out Sprite icon))
-    {
-        resourseIcon.sprite = icon;
-    }
-}*/
 

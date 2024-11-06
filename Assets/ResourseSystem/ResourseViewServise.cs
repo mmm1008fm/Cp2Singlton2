@@ -25,7 +25,7 @@ namespace ResourceSystem
             get
             {
                 if (_viewData == null)
-                    _viewData = Resources.Load("ResourseViewDataSO") as ResourseViewDataSO;
+                    _viewData = Resources.Load("ResourseViewData") as ResourseViewDataSO;
                 return _viewData;
             }
         }

@@ -151,8 +151,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2123448031}
   - {fileID: 1084347758359789396}
+  - {fileID: 2123448031}
   m_Father: {fileID: 337759446}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -641,6 +641,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourseType: 0
   resourseIcon: {fileID: 2123448033}
+  _clickButton: {fileID: 2123448035}
+--- !u!114 &2123448035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 480557771462879894, guid: 83543ad7402158c44b2bdb3c748331ca, type: 3}
+  m_PrefabInstance: {fileID: 2123448030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123448032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1084347758359789395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -808,6 +820,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourseType: 1
   resourseIcon: {fileID: 1084347758359789398}
+  _clickButton: {fileID: 1084347758359789400}
+--- !u!114 &1084347758359789400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 480557771462879894, guid: 83543ad7402158c44b2bdb3c748331ca, type: 3}
+  m_PrefabInstance: {fileID: 1084347758359789395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084347758359789397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
